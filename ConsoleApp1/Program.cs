@@ -1,6 +1,7 @@
 ﻿using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Reflection;
+using System.Data;
 
 namespace ConsoleApp1
 {
@@ -73,15 +74,19 @@ namespace ConsoleApp1
 
         private static void CreateFirstPicture(int number, string text)
         {
-            var middle = number / 2;
+            var rows = (number - 1) * 2;
+            var middle = rows / 2;
 
-            for (var i = 0; i < number; i++)
+            for (var i = 0; i < rows + 1; i++)
             {
                 if (i == middle)
                 {
                     PrintMessage(number, text);
                 }
-                PrintEmptyLine(number, text);
+                else
+                {
+                    PrintEmptyLine(number, text);
+                }
             }
         }
 
