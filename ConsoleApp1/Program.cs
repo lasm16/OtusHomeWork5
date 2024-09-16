@@ -63,7 +63,7 @@ namespace ConsoleApp1
         {
             var lenght = GetLineLenght(number, text);
             var totalLenght = lenght + number;
-            string line = "";
+            var line = "";
             for (int i = 0; i < totalLenght; i++)
             {
                 line += "+";
@@ -75,7 +75,7 @@ namespace ConsoleApp1
         {
             var middle = number / 2;
 
-            for (int i = 0; i < number; i++)
+            for (var i = 0; i < number; i++)
             {
                 if (i == middle)
                 {
@@ -87,7 +87,7 @@ namespace ConsoleApp1
 
         private static void CreateSecondPicture(int number, string text)
         {
-            for (int i = 0; i < number; i++)
+            for (var i = 0; i < number; i++)
             {
                 var line = i % 2 == 0 ? GetChessStyleMesage(number, text, true) : GetChessStyleMesage(number, text, false); // Сложно читаемо, так делать нельзя. Только для ДЗ
                 Console.WriteLine(line);
@@ -159,8 +159,8 @@ namespace ConsoleApp1
 
         private static string GetSpaceForMessage(int number)
         {
-            string line = "";
-            for (int i = 0; i < number - 1; i++)
+            var line = "";
+            for (var i = 0; i < number - 1; i++)
             {
                 line += " ";
             }
