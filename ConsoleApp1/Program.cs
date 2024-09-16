@@ -68,15 +68,7 @@ namespace ConsoleApp1
 
         private static void CreateFirstPicture(int number, string text)
         {
-            var middle = 0;
-            if (number % 2 != 0)
-            {
-                middle = number / 2;
-            }
-            else
-            {
-                middle = number / 2;
-            }
+            var middle = number / 2;
 
             for (int i = 0; i < number; i++)
             {
@@ -84,10 +76,7 @@ namespace ConsoleApp1
                 {
                     PrintMessage(number, text);
                 }
-                else
-                {
-                    PrintEmptyLine(number, text);
-                }
+                PrintEmptyLine(number, text);
             }
         }
 
