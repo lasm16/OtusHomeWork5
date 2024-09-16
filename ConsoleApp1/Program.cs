@@ -84,10 +84,7 @@ namespace ConsoleApp1
                 {
                     PrintMessage(number, text);
                 }
-                else
-                {
-                    PrintEmptyLine(number, text);
-                }
+                PrintEmptyLine(number, text);
             }
         }
 
