@@ -23,6 +23,11 @@ namespace ConsoleApp1
             if (CheckInt(number) && CheckString(text))
             {
                 var border = CreateHorizontalBorder(number, text);
+                if (border.Length > 40)
+                {
+                    Console.WriteLine("Общая ширина не должна превышать 40 символов");
+                    return;
+                }
 
                 Console.WriteLine(border);
                 CreateFirstPicture(number, text);
