@@ -64,7 +64,7 @@ namespace ConsoleApp1
             var lenght = GetLineLenght(number, text);
             var totalLenght = lenght + number;
             var line = "";
-            for (int i = 0; i < totalLenght; i++)
+            for (var i = 0; i < totalLenght; i++)
             {
                 line += "+";
             }
