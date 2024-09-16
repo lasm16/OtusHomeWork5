@@ -124,23 +124,15 @@ namespace ConsoleApp1
 
         private static void CreateThirdPicture(int number, string text)
         {
-
-            PrintCross(number, text);
-        }
-
-        private static void PrintCross(int number, string text)
-        {
             var maxIndex = GetLineLenght(number, text) + number;
             var step = maxIndex / number;
             var emptyLine = GetSpaceForMessage(maxIndex - 1);
             var emptyLineLenght = emptyLine.Length;
-            var prevIndex = 1;
-            for (var i = 0; i < number; i++)
+            for (var i = 0; i < maxIndex - 2; i++)
             {
-                char[] array = emptyLine.ToCharArray();
-                array[i + prevIndex] = '+';
-                array[emptyLineLenght - i - prevIndex - 2] = '+';
-                prevIndex = i + step;
+                var array = emptyLine.ToCharArray();
+                array[i] = '+';
+                array[emptyLineLenght - 1 - i] = '+';
                 var lineWithCross = new string(array);
                 Console.WriteLine("+" + lineWithCross + "+");
             }
@@ -177,7 +169,7 @@ namespace ConsoleApp1
             string line = "";
             for (int i = 0; i < number - 1; i++)
             {
-                line = line + " ";
+                line += " ";
             }
             return line;
         }
