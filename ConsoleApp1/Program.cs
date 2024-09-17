@@ -92,7 +92,8 @@ namespace ConsoleApp1
 
         private static void CreateSecondPicture(int number, string text)
         {
-            for (var i = 0; i < number; i++)
+            var rows = (number - 1) * 2;
+            for (var i = 0; i < rows; i++)
             {
                 var line = i % 2 == 0 ? GetChessStyleMesage(number, text, true) : GetChessStyleMesage(number, text, false); // Сложно читаемо, так делать нельзя. Только для ДЗ
                 Console.WriteLine(line);
