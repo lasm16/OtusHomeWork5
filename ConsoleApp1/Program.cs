@@ -30,13 +30,25 @@ namespace ConsoleApp1
                     return;
                 }
 
-                Console.WriteLine(border);
-                CreateFirstPicture(number, text);
-                Console.WriteLine(border);
-                CreateSecondPicture(number, text);
-                Console.WriteLine(border);
-                CreateThirdPicture(number, text);
-                Console.WriteLine(border);
+                for (int i = 0; i < 3; i++)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            Console.WriteLine(border);
+                            CreateFirstPicture(number, text);
+                            break;
+                        case 1:
+                            Console.WriteLine(border);
+                            CreateSecondPicture(number, text);
+                            break;
+                        case 2:
+                            Console.WriteLine(border);
+                            CreateThirdPicture(number, text);
+                            Console.WriteLine(border);
+                            break;
+                    }
+                }
             }
         }
 
