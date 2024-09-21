@@ -30,7 +30,7 @@ namespace ConsoleApp1
                     return;
                 }
 
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 3; i++) // Можно и без этого, но по другому не придумал как применить switch-case
                 {
                     switch (i)
                     {
