@@ -104,10 +104,11 @@ namespace ConsoleApp1
 
         private static void CreateSecondPicture(int number, string text)
         {
-            var rows = (number - 1) * 2;
-            for (var i = 0; i < rows; i++)
+            var rows = number * 2;
+            for (var i = 0; i < rows - 1; i++)
             {
-                var line = i % 2 == 0 ? GetChessStyleMesage(number, text, true) : GetChessStyleMesage(number, text, false); // Сложно читаемо, так делать нельзя. Только для ДЗ
+                var condition = i % 2 == 0 ? true : false;
+                var line = GetChessStyleMesage(number, text, condition);
                 Console.WriteLine(line);
             }
         }
